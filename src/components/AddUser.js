@@ -22,6 +22,7 @@ function AddUser(props) {
       return;
     }
 
+    //to reset
     props.onAddUser(enteredName, enteredAge);
     setEnteredName("");
     setEnteredAge("");
@@ -59,6 +60,7 @@ function AddUser(props) {
             className="input"
             id="username"
             onChange={nameChangeHandler}
+            value={enteredName} //for reset
           />
 
           <label className="label" htmlFor="age">
@@ -69,6 +71,7 @@ function AddUser(props) {
             className="input"
             id="age"
             onChange={ageChangeHandler}
+            value={enteredAge} //for reset
           />
 
           <button className="button" type="submit">
